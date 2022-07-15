@@ -1,0 +1,7 @@
+# multiplyer
+this application has the propose multiplying large numbers integer and return a result.
+
+
+diccionary exceptions
+
+"0002","the string contain invalid characters, you must only use numeric characters

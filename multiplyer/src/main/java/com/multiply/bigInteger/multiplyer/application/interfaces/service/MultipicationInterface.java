@@ -1,7 +1,6 @@
-package com.multiply.bigInteger.multiplyer.interfaces.service;
+package com.multiply.bigInteger.multiplyer.application.interfaces.service;
 
-import com.multiply.bigInteger.multiplyer.domain.MathParameters;
-import com.multiply.bigInteger.multiplyer.domain.entities.ResultOperation;
+import com.multiply.bigInteger.multiplyer.application.layer.services.domain.entities.ResultOperation;
 
 import java.util.List;
 

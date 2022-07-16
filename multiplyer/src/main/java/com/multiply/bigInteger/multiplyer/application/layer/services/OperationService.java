@@ -1,9 +1,8 @@
-package com.multiply.bigInteger.multiplyer.services;
+package com.multiply.bigInteger.multiplyer.application.layer.services;
 
-import com.multiply.bigInteger.multiplyer.domain.MathParameters;
-import com.multiply.bigInteger.multiplyer.domain.entities.ResultOperation;
-import com.multiply.bigInteger.multiplyer.interfaces.repository.MultiplicationRepository;
-import com.multiply.bigInteger.multiplyer.interfaces.service.MultipicationInterface;
+import com.multiply.bigInteger.multiplyer.application.layer.services.domain.entities.ResultOperation;
+import com.multiply.bigInteger.multiplyer.application.interfaces.repository.MultiplicationRepository;
+import com.multiply.bigInteger.multiplyer.application.interfaces.service.MultipicationInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,8 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-public class MultiplicationService  implements MultipicationInterface {
-@Autowired
+public class OperationService implements MultipicationInterface {
+    @Autowired
     MultiplicationRepository multiplicationRepository;
 
     @Override
@@ -29,11 +28,11 @@ public class MultiplicationService  implements MultipicationInterface {
 
     @Override
     public List<ResultOperation> getAllOperations() {
-        return null;
+        return multiplicationRepository.findAll();
     }
 
     @Override
     public void deleteAll() {
-
+        multiplicationRepository.deleteAll();
     }
 }

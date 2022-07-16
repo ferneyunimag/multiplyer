@@ -24,6 +24,7 @@ import javax.servlet.http.HttpServletRequest;
 public class ApiExceptionHandler {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler({
+            GeneralException.class,
             MalformedException.class,
             HttpRequestMethodNotSupportedException.class,
             MethodArgumentNotValidException.class,
@@ -41,7 +42,7 @@ public class ApiExceptionHandler {
     }
 
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    @ExceptionHandler({})
+    @ExceptionHandler({ })
     @ResponseBody
     public ErrorMessage notFound(HttpServletRequest request, NotFoundException e) {
         return new ErrorMessage(e, request.getRequestURI());

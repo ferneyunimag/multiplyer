@@ -1,6 +1,6 @@
-package com.multiply.bigInteger.multiplyer.domain;
+package com.multiply.bigInteger.multiplyer.application.layer.services.domain;
 
-import com.multiply.bigInteger.multiplyer.domain.valueObjects.StringValueObject;
+import com.multiply.bigInteger.multiplyer.application.layer.services.domain.valueObjects.StringValueObject;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,11 +11,11 @@ public class MathParameters {
     @Setter
     private StringValueObject result;
     @Setter
-    private String operation;
+    private String operator;
 
-    public MathParameters(String num1, String num2,String operation) {
+    public MathParameters(String num1, String num2,String operator) {
         this.num1 = new StringValueObject(num1);
         this.num2 = new StringValueObject(num2);
-        this.operation= operation;
+        this.operator= operator;
     }
 }
